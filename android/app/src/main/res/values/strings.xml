@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">erounpamphlet</string>
+    <string name="app_name">이로운팜플렛</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">DE9X39x2YZbmk7vtHd1OI-q1yNB7eFtwh96ce</string>
+    <string name="kakao_app_key">350e62f611a289da56be920db9853d1c</string>
 </resources>

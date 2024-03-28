@@ -1,10 +1,10 @@
 buildscript {
     ext {
-        buildToolsVersion = "34.0.0"
-        minSdkVersion = 21
-        compileSdkVersion = 34
-        targetSdkVersion = 34
-        ndkVersion = "25.1.8937393"
+        buildToolsVersion = "33.0.0"
+        minSdkVersion = 23
+        compileSdkVersion = 33
+        targetSdkVersion = 33
+        ndkVersion = "23.1.7779620"
         kotlinVersion = "1.8.0"
     }
     repositories {
@@ -14,8 +14,17 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${project.ext.kotlinVersion}")
+        classpath 'com.google.gms:google-services:4.4.0'
     }
 }
 
-apply plugin: "com.facebook.react.rootproject"
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://naver.jfrog.io/artifactory/maven/'
+        }
+    }
+}
